@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShow - Your Entertainment Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>📚 BookShow</h1>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#books" class="nav-link">Books</a></li>
+                <li><a href="#shows" class="nav-link">Shows</a></li>
+                <li id="userMenuContainer" class="user-menu-container" style="display: none;">
+                    <button id="userBtn" class="user-btn">
+                        <span id="userName">User</span> ▼
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#profile">Profile</a>
+                        <a href="#favorites">Favorites</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </li>
+                <li id="authLinks">
+                    <button id="loginBtn" class="btn btn-primary">Login</button>
+                    <button id="signupBtn" class="btn btn-secondary">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to BookShow</h2>
+            <p>Discover amazing books and shows in one place</p>
+            <button id="exploreBtnHero" class="btn btn-large">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="books-section" id="books">
+        <div class="container">
+            <h2>Popular Books</h2>
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section class="shows-section" id="shows">
+        <div class="container">
+            <h2>Popular Shows</h2>
+            <div class="shows-grid" id="showsGrid">
+                <!-- Shows will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p>Don't have an account? <a href="#" id="switchToSignup">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignupModal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password:</label>
+                    <input type="password" id="signupConfirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close" id="closeProfileModal">&times;</span>
+            <h2>My Profile</h2>
+            <div id="profileContent">
+                <p><strong>Name:</strong> <span id="profileName">-</span></p>
+                <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+                <p><strong>Member Since:</strong> <span id="memberSince">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favoritesModal">
+        <div class="modal-content">
+            <span class="close" id="closeFavoritesModal">&times;</span>
+            <h2>My Favorites</h2>
+            <div id="favoritesList"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BookShow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="modules/auth.js"></script>
+    <script src="modules/ui.js"></script>
+    <script src="modules/data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
