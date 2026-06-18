@@ -9,3 +9,6 @@
 
 [context.production.environment]
   NETLIFY_USE_YARN = false
+
+[functions]
+  node_bundler = "esbuild"
