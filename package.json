@@ -1,0 +1,17 @@
+{
+  "name": "bookmyshow",
+  "version": "1.0.0",
+  "description": "A book and show discovery website with login/signup functionality",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "books",
+    "shows",
+    "entertainment"
+  ],
+  "author": "Asmit Kumar",
+  "license": "MIT"
+}
