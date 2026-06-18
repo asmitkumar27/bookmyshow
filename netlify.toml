@@ -7,13 +7,6 @@
   to = "/index.html"
   status = 200
 
-[context.production.environment]
-  NETLIFY_USE_YARN = false
-
-[functions]
-  node_bundler = "esbuild"
-
-# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
